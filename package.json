@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
-    "intersection-observer": "^0.12.2"
+    "intersection-observer": "^0.12.2",
+    "rxjs": "^7.8.1",
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }
