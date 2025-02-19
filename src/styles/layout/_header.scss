@@ -1,6 +1,6 @@
 /* header */
-@use 'helpers/vars' as *;
-@use 'helpers/all' as *;
+@use '../helpers/vars' as *;
+@use '../helpers/all' as *;
 
 .header {
 	padding: 82px 97px 82px;
@@ -193,9 +193,6 @@
 		}
 
 		&.instagram {
-
-
-
 			@include media('<desktop') {
 				margin-bottom: 0;
 			}
