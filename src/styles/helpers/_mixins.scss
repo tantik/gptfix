@@ -3,16 +3,33 @@
 @mixin clearfix {
 	&:before,
 	&:after {
-		content: '';
-		display: table;
+	  content: '';
+	  display: table;
 	}
 	&:after { clear: both; }
-}
-
-
-@mixin grid($cols, $offset) {
+  }
+  
+  @mixin grid($cols, $offset) {
 	$Q: ( $cols - 1 ) / $cols;
 	$Off: $offset * $Q;
 	$width: 100% / $cols;
 	width: calc(#{$width} - #{$Off});
-}
+  }
+  
+  @mixin media($query) {
+	@if type-of($query) == 'string' {
+	  @if $query == '<phone' {
+		@media (max-width: 768px) { @content; }
+	  } @else if $query == '<tablet' {
+		@media (max-width: 960px) { @content; }
+	  } @else if $query == '<desktop' {
+		@media (max-width: 1024px) { @content; }
+	  } @else if $query == '<lg' {
+		@media (max-width: 1760px) { @content; }
+	  } @else if $query == '>=992px' {
+		@media (min-width: 992px) { @content; }
+	  } @else if $query == '<=991px' {
+		@media (max-width: 991px) { @content; }
+	  }
+	}
+  }
