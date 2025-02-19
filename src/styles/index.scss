@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 // Helpers
-@use "helpers/_vars" as *;
+@use "helpers/vars" as *;
 @use "helpers/_all";
-@use "helpers/_mixins" as *;
+@use "helpers/mixins" as *;
 
 // Components
 @use "components/fonts";
