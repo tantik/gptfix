@@ -1,4 +1,4 @@
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock/lib/bodyScrollLock.es6';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 const indexPage = document.getElementById('index');
 const header = document.getElementById('header');

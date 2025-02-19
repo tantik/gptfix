@@ -1,4 +1,4 @@
-require('intersection-observer');
+import 'intersection-observer';
 
 if (window.NodeList && !NodeList.prototype.forEach) {
 	NodeList.prototype.forEach = Array.prototype.forEach;
