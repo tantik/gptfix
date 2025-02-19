@@ -14,4 +14,5 @@ class Emitter {
   }
 }
 
-export default new Emitter();
+export default Emitter; // ✅ Теперь экспортируется класс, а не экземпляр
+

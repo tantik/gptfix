@@ -1,27 +1,16 @@
-import Emitter from './emitter';
+import Emitter from './emitter'; // ✅ Теперь импорт правильный
 
-const HOOK_EMITTER = new Emitter();
+const HOOK_EMITTER = new Emitter(); // ✅ Ошибка исправлена
 
-export default class LifeCycle {
-	constructor() {
-		this.events = new Emitter();
-	}
-  
-	on(event, callback) {
-		this.events.on(event, callback);
-	}
-  
-	emit(event, data) {
-		this.events.emit(event, data);
-	}
-}
+let moduleId;
 
 /* Module decorator */
 export function Initiate(options = {}) {
 	// create moduleId
-	const moduleId = (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase();
+	moduleId = (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase();
 
 	return function (classPrototype) {
+
 		const classInstance = new classPrototype();
 		/*
 		* HOOK `PREPARE` - prepare module with decorators
@@ -41,10 +30,10 @@ export function Initiate(options = {}) {
 
 export function Listener(target, eventName) {
 	return function (classPrototype, propertyName) {
-		const moduleId = (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase();
 
 		// wait HOOK `PREPARE`
 		HOOK_EMITTER.on(`$prepare.module#${moduleId}`, (instance) => {
+
 			// on HOOK `PREPARE` addListeners
 			target.addEventListener(eventName, instance[propertyName].bind(instance));
 
@@ -61,6 +50,7 @@ export function Listener(target, eventName) {
 function onViewIO(classInstance) {
 	return new IntersectionObserver((entries, observer) => {
 		entries.forEach(entry => {
+
 			if (entry.isIntersecting) {
 				classInstance.onViewInit();
 				observer.disconnect();
