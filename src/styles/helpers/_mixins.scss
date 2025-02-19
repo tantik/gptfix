@@ -17,7 +17,7 @@
   }
   
   @mixin media($query) {
-	@if type-of($query) == 'string' {
+	@if meta.type-of($query) == 'string' {
 	  @if $query == '<phone' {
 		@media (max-width: 768px) { @content; }
 	  } @else if $query == '<tablet' {
