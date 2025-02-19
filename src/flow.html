@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+	<meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- og format -->
+	<meta property="og:title" content="">
+	<!-- bar color -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/icon/apple-touch-icon152.png" sizes="152x152">
+	<title>Flow</title>
+
+	<script>
+
+		(function (d) {
+			var config = {
+					kitId: 'ioo8rmz',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement, t = setTimeout(function () {
+					h.className = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+				}, config.scriptTimeout), tk = d.createElement('script'), f = false, s = d.getElementsByTagName('script')[0], a;
+			h.className += ' wf-loading';
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function () {
+				a = this.readyState;
+				if (f || a && a != 'complete' && a != 'loaded') return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config);
+				} catch (e) {
+				}
+			};
+			s.parentNode.insertBefore(tk, s);
+		})(document);
+	</script>
+</head>
+
+
+<!--in english add class 'lang-en' body-->
+
+<body>
+<div class="wrapper" id="wrapper">
+	<%= _.template(require('./parts/header.html'))() %>
+	<div class="app" id="app">
+
+		<div class="offset-top">
+			<section class="flow">
+				<div class="container">
+		<div class="flow__inner">
+			<h1 class="app__title">
+				WORK FLOW
+			</h1>
+
+			<div class="flow__content">
+				<ul class="flow__list">
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							ヒアリング
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy" data-src="images/gif/hearing.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									Webサイト内からご連絡いただきましたらご対面、またはZOOMでヒアリングをして商品の課題を洗い出し、効果的なパッケージデザインをご提案します。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							初回デザイン
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy" data-src="images/gif/drafting.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									ご依頼をいただいて10日ほどで最初のデザイン案をご提案させていただきます。叩き台なのでそこからさらにどういうデザインにしていくかを打ち合わせさせていただきます。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							お見積もり
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy" data-src="images/gif/estimate.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									ヒアリングさせていただいた仕様や生産数をもとに、資材のお見積もりをご提案させていただきます。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__list-banner light-green-bg">
+								<span>
+									ここまで無料
+								</span>
+					</li>
+				</ul>
+
+				<ul class="flow__list">
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							デザイン
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy" data-src="images/gif/design.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									初回デザインで決定した方向性をもとにより具体的なデザイン作業を進めさせていただきます。デザイン料の50％を前受金として頂戴いたします。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							校正、出稿
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy japan" data-src="images/gif/proofreading_japanese.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+								<img class="lazy english" data-src="images/gif/proofreading_english.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									デザインが完成しましたらデザインや表示項目に間違いがないかを校正して協力会社にデータ出稿をします。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__item">
+						<h2 class="flow__item-title">
+							納品
+						</h2>
+
+						<div class="flow__item-content">
+							<div class="flow__item-content-img">
+								<img class="lazy japan" data-src="images/gif/derivery_japanese.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+								<img class="lazy english" data-src="images/gif/derivery_english.gif" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="img desc">
+							</div>
+							<div class="flow__item-content-info">
+								<p class="text">
+									印刷が完成しましたらパッケージの完成品をご指定の住所にお送りします。納品確認後残りのデザイン代と資材代をお支払いただきお取引終了となります。
+								</p>
+							</div>
+						</div>
+					</li>
+					<li class="flow__list-banner green-bg">
+								<span>
+									ここから有料
+								</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+				</div>
+			</section>
+		</div>
+
+	</div>
+	<%= _.template(require('./parts/footer.html'))() %>
+</div>
+</body>
+</html>

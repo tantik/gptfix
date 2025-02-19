@@ -1,0 +1,133 @@
+/*!* helpers parts *!*/
+@import "helpers/all";
+
+
+body {
+	background-color: #10213A;
+}
+
+.app__title {
+	color: $white;
+}
+
+.text {
+	color: $white;
+}
+
+.header {
+	background-color: #10213A;
+
+	&__logo {
+		background-image: url("#{$images}icon/logo-white.png");
+
+		&.gif {
+			background-image: url("#{$images}icon/logo-white.gif");
+		}
+	}
+
+	&.fixed {
+		background-color: rgba(#10213A, .7);
+	}
+
+	&__nav {
+		@include media('<desktop') {
+
+			&:after {
+				background-color: rgba(#000, .8);
+			}
+		}
+	}
+
+	&__nav-link-inner {
+		color: $white;
+	}
+
+	&__nav-link-icon {
+		svg, path {
+			fill: $white;
+		}
+	}
+
+	//&__lang-btn-wrap {
+	//		background-color: rgba($white, .3);
+	//		padding: 6px 12px;
+	//		width: auto;
+	//}
+
+	.hamburger-btn__line {
+		background-color: $white;
+	}
+}
+
+.visual-top {
+	&__bg {
+		background-image: url("#{$images}top-night.jpg");
+		@include media('<470px') {
+			background-image: url("#{$images}top-night-sp.jpg");
+		}
+	}
+
+	&__text {
+		color: $white;
+	}
+}
+
+.flow {
+	&__item-title {
+		color: $white;
+
+		&:before {
+			color: $white;
+		}
+	}
+}
+
+.about {
+	&__person-list-quest, &__person-list-answer {
+		color: $white;
+	}
+}
+
+.contact {
+	&__form-group {
+		input, textarea {
+			background-color: transparent;
+			color: $white;
+
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover,
+			&:-webkit-autofill:focus,
+			&:-webkit-autofill:active {
+				-webkit-box-shadow: 0 0 0 30px #10213a inset !important;
+				box-shadow: 0 0 0 30px #10213a inset !important;
+				-webkit-text-fill-color: #fff;
+
+			}
+		}
+	}
+
+	&__form-label {
+		label {
+			color: $white;
+		}
+	}
+}
+
+.footer__copy {
+	color: $white;
+}
+
+.scroll-to-top {
+	svg, path, g {
+		fill: #E4E4E4;
+	}
+}
+
+.preloader {
+	background-color: #10213a;
+}
+
+
+.wpcf7-response-output {
+	color: $white;
+}

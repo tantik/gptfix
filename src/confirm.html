@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+	<meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- og format -->
+	<meta property="og:title" content="">
+	<!-- bar color -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/icon/apple-touch-icon152.png" sizes="152x152">
+	<title>Confirm</title>
+
+	<script>
+
+		(function (d) {
+			var config = {
+					kitId: 'ioo8rmz',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement, t = setTimeout(function () {
+					h.className = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+				}, config.scriptTimeout), tk = d.createElement('script'), f = false, s = d.getElementsByTagName('script')[0], a;
+			h.className += ' wf-loading';
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function () {
+				a = this.readyState;
+				if (f || a && a != 'complete' && a != 'loaded') return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config);
+				} catch (e) {
+				}
+			};
+			s.parentNode.insertBefore(tk, s);
+		})(document);
+	</script>
+</head>
+
+<!--in english add class 'lang-en' body-->
+
+<body>
+<div class="wrapper" id="wrapper">
+	<%= _.template(require('./parts/header.html'))() %>
+	<div class="app" id="app">
+
+		<div class="offset-top">
+			<section class="confirm">
+				<div class="container">
+					<h1 class="app__title">
+						Contact
+					</h1>
+
+					<div class="contact__content">
+						<p class="text">
+							デザイン、パッケージ等のご相談などお気軽にお問い合わせください。<br>
+							下記フォームよりわかる範囲でご記入ください。必須の項目は必ずご記入お願いします。
+						</p>
+					</div>
+
+					<div class="confirm__list-wrap">
+						<ul class="confirm__list">
+							<li class="confirm__item">
+							<span class="text quest">
+								御社名
+							</span>
+								<span class="text answer">
+					株式会社山路を登り
+						</span>
+							</li>
+							<li class="confirm__item">
+							<span class="text quest required">
+								お名前
+							</span>
+								<span class="text answer">
+					山路登
+						</span>
+							</li>
+							<li class="confirm__item">
+							<span class="text quest required">
+								メールアドレス
+							</span>
+								<span class="text answer">
+					yamamichinobori@gmail.com
+						</span>
+							</li>
+							<li class="confirm__item">
+							<span class="text quest">
+								電話番号
+							</span>
+								<span class="text answer">
+					090-1234-5678
+						</span>
+							</li>
+							<li class="confirm__item">
+							<span class="text quest required">
+								お問い合わせ
+							</span>
+								<span class="text answer">
+				株式会社○○　ご担当者さま
+お世話になっております。○○の○○と申します。
+○○のデザインをお願いできる方を探しており、詳細は以下のとおりです。
+お見積りをいただけますようお願いいたします。
+
+・内容　会社案内パンフレット
+・ジャンル　IT
+・ページ数　50ページ程度
+・納品希望　2020年10月25日（金）18時
+						</span>
+							</li>
+						</ul>
+
+						<div class="btn-wrap">
+							<button onclick="javascript:history.back();return false;" class="btn" type="submit">
+								<span class="btn__inner">
+									内容を送信
+								</span>
+							</button>
+							<button class="btn polo-blue" type="submit">
+								<span class="btn__inner">
+									修正する
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+	</div>
+	<%= _.template(require('./parts/footer.html'))() %>
+</div>
+</body>
+</html>

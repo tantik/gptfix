@@ -1,0 +1,426 @@
+/* header */
+@use 'helpers/vars' as *;
+@use 'helpers/all' as *;
+
+.header {
+	padding: 82px 97px 82px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	@include media('<lg') {
+		padding: 60px 76px 60px 60px;
+	}
+	@include media('<desktop') {
+		padding: 55px 48px;
+	}
+	@include media('<tablet') {
+		padding: 57px 32px;
+	}
+	@include media('<phone') {
+		padding: 25px 20px 31px 32px;
+
+	}
+	@include media('<xs') {
+		padding-left: 13px;
+		padding-right: 13px;
+	}
+
+	&.fixed {
+		position: fixed;
+		top: -100px;
+		z-index: 999;
+		transform: translateY(100px);
+		transition: transform .5s ease-in-out 0s;
+	}
+
+	#overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: transparent;
+		z-index: 89;
+
+	}
+
+	&__logo {
+		display: block;
+		max-width: 388px;
+		width: 100%;
+		position: relative;
+		z-index: 99;
+		background-image: url("#{$images}icon/logo-dark.png");
+		height: 68px;
+		background-position: 50% 50%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		@include media('<lg') {
+			max-width: 270px;
+			height: 47px;
+		}
+
+
+		@include media('<tablet') {
+			max-width: 195px;
+			height: 34px;
+		}
+		@include media('<phone') {
+			max-width: 164px;
+			height: 29px;
+		}
+
+		&.gif {
+			background-image: url("#{$images}icon/logo-dark.gif");
+		}
+
+		&.active {
+			@include media('<phone') {
+				background-image: url("#{$images}icon/logo-white.gif");
+			}
+		}
+
+		.visually-hidden {
+			position: absolute;
+			clip: rect(0 0 0 0);
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			border: 0;
+			overflow: hidden;
+		}
+	}
+
+
+	&__nav-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: calc(100% - calc(470 / 1700 * 100vw));
+
+
+		&.menu-open {
+			.header__nav {
+				transform: translateX(0);
+			}
+
+			.header__lang {
+				background-color: $white;
+			}
+
+			.header__lang-inner {
+				color: $grey;
+			}
+		}
+	}
+
+	&__nav {
+		padding-right: 48px;
+		width: 100%;
+
+		@include media('<1340px') {
+			padding-right: 30px;
+		}
+		@include media('<1180px'){
+			padding-right: 20px;
+		}
+		@include media('<desktop') {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 90;
+			width: 300px;
+			height: 100vh;
+			padding-right: 0;
+			transform: translateX(100%);
+			transition: transform .2s;
+			&:after {
+				content: '';
+				left: 0;
+				top: 0;
+				position: absolute;
+				width: 100%;
+				height: 120vh;
+				z-index: -1;
+			}
+		}
+
+		@include media('<phone') {
+			width: 100%;
+		}
+
+	}
+
+	&__nav-list {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		height: 100%;
+		@media (max-height: 620px) {
+			transform: scale(.6);
+		}
+
+		@media (max-height: 630px) and (orientation: landscape) {
+			transform: scale(.45);
+			margin-top: 20px;
+		}
+		@media (max-height: 375px) and (max-width: 812px) {
+			transform: scale(.4) translateY(-100px);
+			margin-top: 30px;
+		}
+		@include media('<desktop') {
+			flex-direction: column;
+			height: 100%;
+			justify-content: center;
+		}
+	}
+
+	&__nav-item {
+		transition: opacity .2s;
+		@include media('<desktop') {
+			margin-bottom: 96px;
+		}
+
+		@include media('<phone') {
+			margin-bottom: 80px;
+		}
+
+		&.instagram {
+
+
+
+			@include media('<desktop') {
+				margin-bottom: 0;
+			}
+		}
+
+		@at-root :root.hover &:hover {
+			opacity: .8;
+		}
+	}
+
+	&__nav-link {
+		display: block;
+		padding-left: 48px;
+		padding-right: 48px;
+		@include media('<1340px') {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		@include media('<1180px'){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@include media('<desktop') {
+			padding: 0;
+		}
+	}
+
+	&__nav-link-inner {
+		font-size: 42px;
+		line-height: 42px;
+		text-transform: uppercase;
+		color: $grey;
+		font-family: $din;
+		font-weight: 400;
+		font-style: normal;
+		@include media('<lg') {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		@include media('<desktop') {
+			font-size: 42px;
+			line-height: 42px;
+		}
+		@include media('<tablet') {
+			font-size: 34px;
+			line-height: 34px;
+		}
+		@include media('<phone') {
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+
+	&__nav-link-icon {
+		display: block;
+		width: 56px;
+		height: 57px;
+		@include media('<lg') {
+			width: 36px;
+			height: 37px;
+		}
+		@include media('<desktop') {
+			width: 56px;
+			height: 57px;
+		}
+		@include media('<tablet') {
+			width: 45px;
+			height: 45px;
+		}
+		@include media('<phone') {
+			width: 40px;
+			height: 40px;
+		}
+
+		svg, path {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__lang-btn-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 90;
+		//@include media('<tablet') {
+		//	background-color: rgba($white, .3);
+		//	padding: 9px 12px;
+		//	width: auto;
+		//
+		//}
+	}
+
+	&__lang {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $grey;
+		padding: 5px 27px;
+		transition: background-color, opacity .2s;
+		height: 55px;
+		@include media('<lg') {
+			padding: 5px 10px;
+			height: 38px;
+		}
+		@include media('<desktop') {
+			padding: 3px 11px;
+		}
+		@include media('<tablet') {
+			padding-left: 9px;
+			padding-right: 9px;
+			height: 30px;
+		}
+
+		@include media('<phone') {
+			padding: 3px 8px 3px;
+			height: 25px;
+		}
+
+		@at-root :root.hover &:hover {
+			opacity: .8;
+		}
+	}
+
+	&__lang-inner {
+		display: flex;
+		font-size: 45px;
+		line-height: 45px;
+		color: $white;
+		transition: color .2s;
+		font-family: $din;
+		font-weight: 400;
+		font-style: normal;
+		text-transform: uppercase;
+		word-break: initial;
+		@include media('<lg') {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		@include media('<desktop') {
+			font-size: 28px;
+			line-height: 28px;
+		}
+		@include media('<tablet') {
+			font-size: 24px;
+			line-height: 25px;
+		}
+		@include media('<phone') {
+			font-size: 19px;
+			line-height: 19px;
+		}
+	}
+
+	.hamburger-btn {
+		@include media('>=desktop') {
+			display: none;
+		}
+		display: block;
+		width: 32px;
+		padding: 0;
+		margin-left: 7px;
+		position: relative;
+		cursor: pointer;
+		box-shadow: none;
+		border-radius: 0;
+		border: none;
+		background-color: transparent;
+		@include media('<tablet') {
+			width: 27px;
+			margin-left: 5px;
+		}
+		@include media('<phone') {
+			width: 22px;
+			margin-left: 7px;
+		}
+
+
+		&__line {
+			display: block;
+			margin-bottom: 5px;
+			width: 32px;
+			height: 4px;
+			transition: .4s;
+			opacity: 1;
+			@include media('<tablet') {
+				width: 27px;
+			}
+
+			@include media('<phone') {
+				height: 3px;
+				width: 22px;
+				margin-bottom: 3px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&.active {
+			.hamburger-btn__line {
+				background-color: $white;
+			}
+
+			.first {
+				transform: translateY(9px) rotate(45deg);
+				@include media('<phone') {
+					transform: translateY(6px) rotate(45deg);
+				}
+			}
+
+			.second {
+				transform: translateX(100%);
+				opacity: 0;
+			}
+
+			.third {
+				transform: translateY(-9px) rotate(-45deg);
+				@include media('<phone') {
+					transform: translateY(-6px) rotate(-45deg);
+				}
+			}
+		}
+
+	}
+}

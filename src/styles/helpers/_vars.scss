@@ -1,0 +1,34 @@
+/*
+	vars
+*/
+
+$fonts: '../fonts/';
+$images: '../images/';
+
+$midashi: 'a-otf-midashi-go-mb31-pr6n', sans-serif;
+$din: 'din-condensed', sans-serif;
+$serif: 'A1 Mincho', Noto Serif JP, sans-serif;
+//$defFonts: 'a-otf-midashi-go-mb31-pr6n', 'din-condensed', Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans",
+//YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+$breakpoints: (
+	xs: 375px,
+	phone: 768px,
+	tablet: 960px,
+	desktop: 1024px,
+	lg: 1760px,
+);
+
+// wrap
+$container-p: 48px;
+$container-width: 1015px;
+
+// colors
+$white: #fff;
+$black: #000;
+
+$grey: #363636;
+
+// transitions
+$transition_dur: .2s;
+$transition_tfn: cubic-bezier(.165, .84, .44, 1);

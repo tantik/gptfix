@@ -1,0 +1,209 @@
+.contact {
+	.container {
+		max-width: 860px;
+	}
+
+	&__content {
+		margin-top: 48px;
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+		@include media('<phone') {
+			margin-top: 18px;
+		}
+
+	}
+
+	&__form-wrap {
+		margin-top: 48px;
+		max-width: 408px;
+		width: 100%;
+		@include media('<tablet') {
+			margin-top: 40px;
+			max-width: 304px;
+		}
+	}
+
+	&__form {
+		display: block;
+	}
+
+	&__form-group {
+		margin-top: 48px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.error {
+			border-color: #FF4141;
+		}
+
+		input, textarea {
+			width: 100%;
+			box-shadow: none;
+			border-radius: 0;
+			resize: none;
+			border: 1px solid #707070;
+			-webkit-appearance: none;
+			padding: 14px;
+			height: 48px;
+			font-size: 16px;
+			line-height: 20px;
+			font-family: $din;
+			font-weight: 200;
+
+			&::placeholder {
+				line-height: 20px;
+			}
+
+
+			@include media('<tablet') {
+				height: 32px;
+				padding: 5px 10px;
+				font-size: 14px;
+			}
+		}
+
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+	}
+
+	&__form-label {
+		display: block;
+		font-size: 23px;
+		line-height: 24px;
+		font-family: $serif;
+		font-feature-settings: normal;
+		position: relative;
+		margin-bottom: 24px;
+		@include media('<tablet') {
+			font-size: 17px;
+			line-height: 17px;
+			margin-bottom: 16px;
+		}
+
+	}
+
+	&__form-input {
+		display: block;
+	}
+
+	&__form-textarea {
+		display: block;
+		height: 320px;
+		@include media('<tablet') {
+			height: 240px;
+		}
+
+		textarea {
+			height: 100%;
+		}
+	}
+
+	.btn {
+		margin-top: 60px;
+		@include media('<tablet') {
+			margin-top: 32px;
+		}
+	}
+}
+
+.required {
+	&:after {
+		content: '必須';
+		position: relative;
+		top: -2px;
+		margin-left: 24px;
+		font-size: 15px;
+		padding: 1px 10px 2px;
+		line-height: 15px;
+		background-color: #FF4141;
+		color: $white;
+		@include media('<tablet') {
+			font-size: 14px;
+			line-height: 14px;
+			padding: 0 8px 1px;
+		}
+	}
+}
+
+.confirm {
+	&__list-wrap {
+		margin-top: 48px;
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+	}
+
+	&__list {
+		max-width: 675px;
+		width: 100%;
+		@include media('<phone') {
+			max-width: 290px;
+		}
+	}
+
+	&__item {
+		margin-top: 48px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+
+		.text {
+			display: block;
+		}
+
+		.quest {
+			font-family: $serif;
+			font-feature-settings: normal;
+			margin-bottom: 24px;
+			@include media('<tablet') {
+				margin-bottom: 16px;
+			}
+		}
+
+		.answer {
+			font-family: $midashi;
+		}
+	}
+
+}
+
+
+.thanks {
+	&__list {
+		margin-top: 48px;
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+	}
+
+	.text {
+		font-family: $midashi;
+	}
+
+	&__desc {
+		margin-top: 48px;
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+	}
+}
+
+
+span.ajax-loader {
+	display: none !important;
+	position: absolute;
+	height: 0;
+	width: 0;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}

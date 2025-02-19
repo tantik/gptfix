@@ -1,0 +1,144 @@
+.about {
+	.container {
+		max-width: 743px;
+@include media('<lg'){
+max-width: 890px;
+}
+		@include media('<desktop') {
+			padding-left: 48px;
+			padding-right: 48px;
+		}
+		@include media('<tablet') {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@include media('<phone') {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+
+	&__content {
+		margin-top: 48px;
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+		@include media('<phone') {
+			margin-top: 18px;
+		}
+
+		.text {
+			margin-bottom: 30px;
+			@include media('<tablet') {
+				margin-bottom: 24px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__person {
+		margin-top: 48px;
+		max-width: 617px;
+		width: 100%;
+		margin-left: auto;
+		@include media('<lg'){
+			margin-left: calc(150 / 960 * 100%);
+		}
+
+		@include media('<tablet') {
+			max-width: 480px;
+			margin-top: 40px;
+		margin-left: calc(75 / 768 * 100%);
+		}
+		@include media('<phone'){
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__person-img {
+		display: block;
+		width: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	&__person-list-wrap {
+		padding-left: 30px;
+		margin-top: 48px;
+		@include media('<desktop') {
+			margin-top: 40px;
+			padding-left: 20px;
+		}
+		@include media('<phone') {
+			padding-left: 0;
+		}
+	}
+
+	&__person-list {
+		margin-bottom: 26px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		@include media('<desktop') {
+			margin-bottom: 22px;
+		}
+		@include media('<tablet') {
+			margin-bottom: 18px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__person-list-quest {
+		font-size: 19px;
+		line-height: 26px;
+		margin-right: 30px;
+		font-family: $midashi;
+		font-weight: 700;
+		white-space: nowrap;
+
+		@include media('<tablet') {
+			font-size: 15px;
+			line-height: 20px;
+			margin-right: 24px;
+		}
+	}
+
+	&__person-list-answer {
+		font-size: 21px;
+		line-height: 28px;
+		font-family: $serif;
+		-webkit-font-feature-settings: 'palt' 1;
+		font-feature-settings: 'palt' 1;
+		@include media('<tablet') {
+			font-size: 17px;
+			line-height: 22px;
+		}
+	}
+}
+
+
+.lang-en {
+	.about {
+		&__person-list-quest {
+			font-family: $din;
+			font-weight: 700;
+			font-style: normal;
+		}
+
+		&__person-list-answer {
+			font-family: $din;
+			font-weight: 300;
+			font-style: normal;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+/* footer */
+
+.footer {
+	margin-top: auto;
+	padding-top: 60px;
+	padding-bottom: 60px;
+@include media('<phone'){
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+	&__copy {
+		text-align: center;
+		display: block;
+		font-size: 22px;
+		font-family: $serif;
+		font-feature-settings:normal;
+		line-height: 47px;
+		@include media('<phone'){
+			font-size: 14px;
+			line-height: 30px;
+		}
+	}
+}

@@ -1,0 +1,85 @@
+/* btn */
+.btn-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.btn {
+		margin-top: 60px;
+		@include media('<desktop') {
+			margin-top: 32px;
+		}
+		@include media('<320px') {
+			padding-left: 7px;
+			padding-right: 7px;
+
+		}
+
+		&:first-child {
+			margin-right: 48px;
+			@include media('<desktop') {
+				margin-right: 32px;
+			}
+			@include media('<320px') {
+				margin-right: 15px;
+			}
+		}
+
+	}
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 351px;
+	padding: 19px 10px 20px;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	background-color: #7B8384;
+
+	position: relative;
+	text-align: center;
+
+	font-weight: normal;
+	font-style: normal;
+	font-size: 25px;
+	line-height: 25px;
+	font-family: $midashi;
+	color: $white;
+	// animate
+	@include media('<tablet') {
+		transition: .4s;
+	}
+
+
+	// defaults
+	cursor: pointer;
+	outline: none;
+	@at-root :root.hover &:hover {
+		background-color: #858F90;
+	}
+	&.polo-blue {
+		background-color: #8BBDCB;
+		@at-root :root.hover &:hover {
+			background-color: #90C7D6;
+		}
+	}
+
+	@include media('<tablet') {
+		padding-top: 14px;
+		padding-bottom: 14px;
+		max-width: 264px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	@include media('<320px') {
+		font-size: 18px;
+	}
+
+	&__inner {
+		display: block;
+	}
+}

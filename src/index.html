@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+	<meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<!-- og format -->
+	<meta property="og:title" content="">
+	<!-- bar color -->
+	<meta name="theme-color" content="#fff">
+	<meta name="msapplication-navbutton-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="images/icon/apple-touch-icon152.png" sizes="152x152">
+
+	<!--	add id 'theme-css' <link in = 'theme-css' href = "styles / light.css" rel = "stylesheet">-->
+
+	<title>Home</title>
+	<script type="text/javascript" src="//code.typesquare.com/static/ZDbTe4IzCko%253D/ts106f.js" charset="utf-8"></script>
+	<script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?5feae02cff10463bacbe7f27ac1e02e5" charset="utf-8"></script>
+	<script>
+
+		(function (d) {
+
+			var config = {
+
+					kitId: 'ioo8rmz',
+
+					scriptTimeout: 3000,
+
+					async: true
+
+				},
+
+				h = d.documentElement, t = setTimeout(function () {
+					h.className = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+				}, config.scriptTimeout), tk = d.createElement('script'), f = false, s = d.getElementsByTagName('script')[0], a;
+			h.className += ' wf-loading';
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function () {
+				a = this.readyState;
+				if (f || a && a != 'complete' && a != 'loaded') return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config);
+				} catch (e) {
+				}
+			};
+			s.parentNode.insertBefore(tk, s);
+
+		})(document);
+
+	</script>
+
+</head>
+
+<!--in english add class 'lang-en' body-->
+
+<body>
+
+<div class="wrapper" id="wrapper">
+	<%= _.template(require('./parts/header.html'))() %>
+	<div class="app" id="app">
+
+		<div class="visual-top" id="index">
+			<div class="visual-top__bg"></div>
+
+			<div class="visual-top__content">
+				<p class="visual-top__text">
+					あたらしいクライアント様から「いま使っているデザインを変えてほしい」というご依頼をいただくことがあります。ただ見た目が良いものに変えるのではなく、本質は何かを見極めて、クライアント様の先にいるお客様にデザインの力で幸せを届けたいと思っています。
+				</p>
+			</div>
+		</div>
+		<div class="gallery__wrap">
+
+			<div class="gallery">
+				<a href="post-single.html" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-01-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-01-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-02-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-02-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-03-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-03-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-04-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-04-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-05-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-05-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-06-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-06-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-07-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-07-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-08-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-08-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-09-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-09-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-10-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-10-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-11-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-11-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-12-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-12-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-13-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-13-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-14-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-14-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-15-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-15-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery">
+				<a href="#" class="gallery__list">
+					<div class="gallery__list-item gallery__list-item--left">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-16-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__list-item gallery__list-item--right">
+						<div class="gallery__list-item-inner">
+							<div class="gallery__list-item-img-wrap">
+								<div class="gallery__list-item-img">
+									<img src="images/slide-images/slide-img-16-min.jpg"
+											 alt="img desc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<%= _.template(require('./parts/footer.html'))() %>
+</div>
+</body>
+</html>

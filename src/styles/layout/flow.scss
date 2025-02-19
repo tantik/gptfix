@@ -1,0 +1,262 @@
+.flow {
+
+	.container {
+		max-width: 1048px;
+		@include media('<desktop') {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+
+	&__inner {
+		padding-left: 32px;
+		@include media('<lg') {
+			padding-left: 0;
+		}
+
+		.app__title {
+			padding-left: 17px;
+			@include media('<phone') {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&__content {
+		margin-top: 24px;
+		counter-reset: num;
+
+		@include media('<tablet') {
+			margin-top: 40px;
+		}
+
+	}
+
+	&__list {
+		display: block;
+		position: relative;
+		padding-right: 108px;
+		margin-top: 64px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include media('<desktop') {
+			padding-right: 49px;
+		}
+		@include media('<tablet') {
+			margin-top: 60px;
+			padding-right: 32px;
+		}
+
+		@include media('<phone') {
+			padding-right: 29px;
+			margin-top: 40px;
+		}
+	}
+
+	&__list-banner {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		height: 100%;
+		width: 59px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include media('<desktop') {
+			right: -32px;
+		}
+		@include media('<tablet') {
+			width: 47px;
+		}
+
+		&.green-bg {
+			background-color: #A7FFE7;
+		}
+
+		&.light-green-bg {
+			background-color: #C7FFF0;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50%;
+			font-size: 30px;
+			font-family: $midashi;
+			writing-mode: vertical-lr;
+			text-transform: uppercase;
+			line-height: 40px;
+			word-break: inherit;
+			letter-spacing: 12px;
+			color: $grey;
+			@include media('<tablet') {
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
+	}
+
+	&__item {
+		margin-top: 64px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@include media('<tablet') {
+			margin-top: 50px;
+		}
+		@include media('<phone') {
+			margin-top: 40px;
+		}
+	}
+
+	&__item-title {
+		position: relative;
+		font-size: 31px;
+		line-height: 41px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 48px;
+		font-family: $midashi;
+		font-weight: 400;
+		@include media('<desktop') {
+			margin-bottom: 40px;
+		}
+		@include media('<tablet') {
+			font-size: 25px;
+			line-height: 33px;
+		}
+		@include media('<phone') {
+			margin-bottom: 16px;
+		}
+
+		&:before {
+			counter-increment: num;
+			content: counter(num, decimal-leading-zero) '-';
+			font-size: 38px;
+			line-height: 51px;
+			transform: translateY(2px);
+			font-family: $din;
+			margin-right: 6px;
+			font-weight: 700;
+			@include media('<tablet') {
+				font-size: 30px;
+				line-height: 40px;
+				margin-top: -2px;
+			}
+		}
+
+
+	}
+
+	&__item-content {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@include media('<phone') {
+			flex-direction: column;
+			justify-content: center;
+			max-width: 282px;
+			width: 100%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
+	&__item-content-img {
+		width: 50%;
+		display: block;
+		@include media('<desktop') {
+			width: 453px;
+		}
+		@include media('<tablet') {
+			width: 360px;
+		}
+		@include media('<phone') {
+			margin-bottom: 24px;
+			width: 100%;
+		}
+
+		.english {
+			display: none;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 337px;
+			object-fit: contain;
+			@include media('<tablet') {
+				height: 267px;
+			}
+			@include media('<phone') {
+				height: 208px;
+			}
+		}
+	}
+
+	&__item-content-info {
+		width: 50%;
+		@include media('<lg') {
+			width: 393px;
+		}
+		@include media('<tablet') {
+			width: 312px;
+		}
+		@include media('<phone') {
+			width: 100%;
+		}
+
+		.text {
+			line-height: 35px;
+			@include media('<desktop') {
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+
+.lang-en {
+	.flow {
+		&__list-banner {
+			span {
+				font-weight: 400;
+				font-style: normal;
+				font-family: $din;
+				letter-spacing: 1.2px;
+				@include media('<tablet') {
+					font-size: 30px;
+					line-height: 40px;
+				}
+			}
+		}
+
+		&__item-title {
+			font-family: $din;
+			font-weight: 400;
+			font-style: normal;
+			@include media('<tablet') {
+				font-size: 30px;
+				line-height: 40px;
+			}
+		}
+
+		&__item-content-img {
+			.japan {
+				display: none;
+			}
+
+			.english {
+				display: block;
+			}
+		}
+	}
+}
