@@ -48,96 +48,96 @@ ul {
 
 /* reset list-style */
 li {
-  list-style: none;
+  list-style none;
 }
 
 /* reset text-decoration */
 a[href] {
-  text-decoration: none;
+  text-decoration none;
 }
 
 a[href]:hover {
-  text-decoration: none;
+  text-decoration none;
 }
 
 /* set cursor pointer for accessibility */
 a[href], button {
-  cursor: pointer;
+  cursor pointer;
 }
 
 span, p, a {
-  word-break: break-word;
+  word-break break-word;
 }
 
 /* reset heading margin */
 h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
+  margin 0;
 }
 
 /* set default body styles */
 body {
-  min-height: 100%;
-  position: relative;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  font-size: 100%;
-  font-style: normal;
-  line-height: normal;
-  color: #000;
+  min-height 100%;
+  position relative;
+  background-color #fff;
+  -webkit-text-size-adjust 100%;
+  font-size 100%;
+  font-style normal;
+  line-height normal;
+  color #000;
 }
 
 /* br fix */
 @include media('>=992px') {
   .mb {
-    display: none !important;
+    display none !important;
   }
   .pc {
-    display: block !important;
+    display block !important;
   }
 }
 
 @include media('<=991px') {
   .mb {
-    display: block !important;
+    display block !important;
   }
   .pc {
-    display: none !important;
+    display none !important;
   }
 }
 
 /* default class */
 .wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  max-width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  position: relative;
+  display flex;
+  flex-flow column nowrap;
+  max-width 100%;
+  min-height 100vh;
+  overflow hidden;
+  position relative;
 }
 
 .container {
-  display: block;
-  width: auto;
-  max-width: $container-width;
-  margin: 0 auto;
-  padding: 0 $container-p;
-  box-sizing: content-box;
+  display block;
+  width auto;
+  max-width $container-width;
+  margin 0 auto;
+  padding 0 $container-p;
+  box-sizing content-box;
 
   @include media('<desktop') {
-    margin-left: 0;
+    margin-left 0;
   }
   @include media('<tablet') {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left 32px;
+    padding-right 32px;
   }
 
   &_fluid {
-    width: 100%;
-    max-width: 100%;
+    width 100%;
+    max-width 100%;
   }
 
   @include clearfix();
   @include media('<=#{$container-width}') {
-    box-sizing: border-box;
+    box-sizing border-box;
   }
 }
