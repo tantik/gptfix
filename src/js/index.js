@@ -1,3 +1,4 @@
+import "../styles/index.scss";
 import './core/polyfill';
 import {boot} from './core/boot';
 import { Anchor } from './anchor';

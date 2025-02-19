@@ -1,18 +1,20 @@
 @charset "utf-8";
 
-/*!* helpers parts *!*/
-@import "helpers/all";
+// Helpers
+@use "helpers/reset";
+@use "helpers/_all";
+@use "helpers/_vars" as *;
 
-/*!* components *!*/
-@import "components/fonts";
-@import "components/reset";
-@import "components/app";
-@import "components/buttons";
+// Components
+@use "components/fonts";
+@use "components/reset";
+@use "components/app";
+@use "components/buttons";
 
-/*!* layout parts *!*/
-@import "layout/header";
-@import "layout/footer";
-@import "layout/main";
-@import "layout/about";
-@import "layout/contact";
-@import "layout/flow";
+// Layout
+@use "layout/header";
+@use "layout/footer";
+@use "layout/main";
+@use "layout/about";
+@use "layout/contact";
+@use "layout/flow";

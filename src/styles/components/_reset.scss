@@ -1,4 +1,4 @@
-@import "~normalize-scss/sass/normalize/import-now";
+@use "normalize-scss/sass/normalize" as *;
 /* reset */
 
 /* set border-box for all */
@@ -67,7 +67,7 @@ a[href]:hover {
 a[href], button {
 	cursor: pointer;
 }
-span,p,a{
+span, p, a {
 	word-break: break-word;
 }
 /* reset heading margin */

@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader, 
+          MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader",
         ],

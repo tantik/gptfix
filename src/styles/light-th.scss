@@ -1,5 +1,5 @@
 /*!* helpers parts *!*/
-@import "helpers/all";
+@use "helpers/all" as *;
 
 body {
 	background-color: $white;
@@ -42,7 +42,6 @@ body {
 				fill: $white;
 			}
 		}
-
 	}
 
 	.hamburger-btn {
@@ -53,7 +52,6 @@ body {
 		}
 		&__line {
 			background-color: $grey;
-
 		}
 	}
 }
@@ -100,7 +98,6 @@ body {
 				-webkit-box-shadow: 0 0 0 30px #fff inset !important;
 				box-shadow: 0 0 0 30px #fff inset !important;
 				-webkit-text-fill-color: #000;
-
 			}
 		}
 	}

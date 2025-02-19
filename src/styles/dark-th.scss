@@ -1,6 +1,5 @@
 /*!* helpers parts *!*/
-@import "helpers/all";
-
+@use "helpers/all" as *;
 
 body {
 	background-color: #10213A;
@@ -49,9 +48,9 @@ body {
 	}
 
 	//&__lang-btn-wrap {
-	//		background-color: rgba($white, .3);
-	//		padding: 6px 12px;
-	//		width: auto;
+	//	background-color: rgba($white, .3);
+	//	padding: 6px 12px;
+	//	width: auto;
 	//}
 
 	.hamburger-btn__line {
@@ -101,7 +100,6 @@ body {
 				-webkit-box-shadow: 0 0 0 30px #10213a inset !important;
 				box-shadow: 0 0 0 30px #10213a inset !important;
 				-webkit-text-fill-color: #fff;
-
 			}
 		}
 	}
@@ -126,7 +124,6 @@ body {
 .preloader {
 	background-color: #10213a;
 }
-
 
 .wpcf7-response-output {
 	color: $white;
