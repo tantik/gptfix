@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
 module.exports = {
   entry: './src/js/index.js',
   output: {
@@ -15,12 +17,17 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
@@ -46,20 +53,22 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles/main.css',
+      filename: 'styles/[name].css',
     }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/images', to: 'images' },
-        { from: 'src/fonts', to: 'fonts' },
+        // Добавьте другие необходимые пути для копирования
       ],
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     compress: true,
     port: 9000,
     hot: true,
+    open: true,
   },
-  mode: 'development',
 };
