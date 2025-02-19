@@ -1,15 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
-const isDevelopment = process.env.NODE_ENV === 'development';
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/js/index.js',
+  mode: "development",
+  entry: "./src/js/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   module: {
@@ -18,57 +16,34 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
+          loader: "babel-loader",
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          MiniCssExtractPlugin.loader, 
+          "css-loader",
+          "sass-loader",
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]',
-        },
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[name][ext]',
-        },
+        test: /\.(png|jpg|gif|svg|woff2?|eot|ttf|otf)$/,
+        type: "asset/resource",
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].css',
+      filename: "styles.css",
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/images', to: 'images' },
-        // Добавьте другие необходимые пути для копирования
-      ],
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
     }),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 9000,
+    static: "./dist",
+    port: 9001,
     hot: true,
-    open: true,
   },
 };
