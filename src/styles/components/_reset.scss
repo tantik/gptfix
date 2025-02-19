@@ -14,11 +14,7 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* appearance: none */
-[type=reset], [type=submit], button,
-input:not( [type=checkbox] ), input:not( [type=radio] ) {
-	-webkit-appearance: none;
-}
+
 
 /* outline: none */
 input, input:focus,
