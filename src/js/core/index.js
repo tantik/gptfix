@@ -1,11 +1,9 @@
-import LifeCycle, { Initiate, Listener } from './life-cycle';
+import { Initiate, Listener } from './life-cycle';
 import Emitter from './emitter';
 
-export { LifeCycle, Initiate, Listener, Emitter };
-
 /*
-* Singleton
-* */
+ * Singleton
+ * */
 export class Singleton {
 	constructor(className) {
 		if (!className._instance) className._instance = this;
@@ -14,8 +12,8 @@ export class Singleton {
 }
 
 /*
-* State container
-* */
+ * State container
+ * */
 export class State {
 	constructor(container, nextClassState) {
 		this.container = container;
@@ -28,8 +26,8 @@ export class State {
 }
 
 /*
-* Bind decorator
-* */
+ * Bind decorator
+ * */
 export function Bind(methodName) {
 	return function (classPrototype, propertyName, descriptor) {
 		if (descriptor.initializer) {
@@ -48,3 +46,6 @@ export function Bind(methodName) {
 		};
 	};
 }
+
+// ✅ Теперь экспортируем без ошибок
+export { Initiate, Listener, Emitter };
