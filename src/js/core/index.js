@@ -1,6 +1,8 @@
-import {Initiate, Listener} from './life-cycle';
+import Emitter from './emitter';
+import LifeCycle from './life-cycle';
 
-export {Initiate, Listener};
+export { Emitter, LifeCycle };
+
 
 /*
 * Singleton
