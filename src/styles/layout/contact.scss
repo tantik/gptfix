@@ -5,20 +5,22 @@
 
 	&__content {
 		margin-top: 48px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			margin-top: 18px;
 		}
-
 	}
 
 	&__form-wrap {
 		margin-top: 48px;
 		max-width: 408px;
 		width: 100%;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 			max-width: 304px;
 		}
@@ -57,15 +59,14 @@
 				line-height: 20px;
 			}
 
-
-			@include media('<tablet') {
+			@media (max-width: 960px) {
 				height: 32px;
 				padding: 5px 10px;
 				font-size: 14px;
 			}
 		}
 
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
 	}
@@ -78,12 +79,12 @@
 		font-feature-settings: normal;
 		position: relative;
 		margin-bottom: 24px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 17px;
 			line-height: 17px;
 			margin-bottom: 16px;
 		}
-
 	}
 
 	&__form-input {
@@ -93,7 +94,8 @@
 	&__form-textarea {
 		display: block;
 		height: 320px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			height: 240px;
 		}
 
@@ -104,7 +106,8 @@
 
 	.btn {
 		margin-top: 60px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 32px;
 		}
 	}
@@ -121,7 +124,8 @@
 		line-height: 15px;
 		background-color: #FF4141;
 		color: $white;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 14px;
 			line-height: 14px;
 			padding: 0 8px 1px;
@@ -132,7 +136,8 @@
 .confirm {
 	&__list-wrap {
 		margin-top: 48px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
 	}
@@ -140,7 +145,8 @@
 	&__list {
 		max-width: 675px;
 		width: 100%;
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			max-width: 290px;
 		}
 	}
@@ -152,7 +158,7 @@
 			margin-top: 0;
 		}
 
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
 
@@ -164,7 +170,8 @@
 			font-family: $serif;
 			font-feature-settings: normal;
 			margin-bottom: 24px;
-			@include media('<tablet') {
+
+			@media (max-width: 960px) {
 				margin-bottom: 16px;
 			}
 		}
@@ -173,14 +180,13 @@
 			font-family: $midashi;
 		}
 	}
-
 }
-
 
 .thanks {
 	&__list {
 		margin-top: 48px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
 	}
@@ -191,12 +197,12 @@
 
 	&__desc {
 		margin-top: 48px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
 	}
 }
-
 
 span.ajax-loader {
 	display: none !important;

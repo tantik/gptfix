@@ -1,18 +1,22 @@
 .about {
 	.container {
 		max-width: 743px;
-@include media('<lg'){
-max-width: 890px;
-}
-		@include media('<desktop') {
+
+		@media (max-width: 1760px) {
+			max-width: 890px;
+		}
+
+		@media (max-width: 1024px) {
 			padding-left: 48px;
 			padding-right: 48px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			padding-left: 40px;
 			padding-right: 40px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			padding-left: 32px;
 			padding-right: 32px;
 		}
@@ -20,16 +24,19 @@ max-width: 890px;
 
 	&__content {
 		margin-top: 48px;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-top: 40px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			margin-top: 18px;
 		}
 
 		.text {
 			margin-bottom: 30px;
-			@include media('<tablet') {
+
+			@media (max-width: 960px) {
 				margin-bottom: 24px;
 			}
 
@@ -44,16 +51,18 @@ max-width: 890px;
 		max-width: 617px;
 		width: 100%;
 		margin-left: auto;
-		@include media('<lg'){
+
+		@media (max-width: 1760px) {
 			margin-left: calc(150 / 960 * 100%);
 		}
 
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			max-width: 480px;
 			margin-top: 40px;
-		margin-left: calc(75 / 768 * 100%);
+			margin-left: calc(75 / 768 * 100%);
 		}
-		@include media('<phone'){
+
+		@media (max-width: 768px) {
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -72,11 +81,13 @@ max-width: 890px;
 	&__person-list-wrap {
 		padding-left: 30px;
 		margin-top: 48px;
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			margin-top: 40px;
 			padding-left: 20px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			padding-left: 0;
 		}
 	}
@@ -86,10 +97,12 @@ max-width: 890px;
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-start;
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			margin-bottom: 22px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			margin-bottom: 18px;
 		}
 
@@ -106,7 +119,7 @@ max-width: 890px;
 		font-weight: 700;
 		white-space: nowrap;
 
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			font-size: 15px;
 			line-height: 20px;
 			margin-right: 24px;
@@ -119,13 +132,13 @@ max-width: 890px;
 		font-family: $serif;
 		-webkit-font-feature-settings: 'palt' 1;
 		font-feature-settings: 'palt' 1;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 17px;
 			line-height: 22px;
 		}
 	}
 }
-
 
 .lang-en {
 	.about {

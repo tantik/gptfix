@@ -21,7 +21,7 @@ body {
 	}
 
 	&__nav {
-		@include media('<desktop') {
+		@media (max-width: 1024px) {
 			&:after {
 				background-color: rgba(#000, .7);
 			}
@@ -30,7 +30,8 @@ body {
 
 	&__nav-link-inner {
 		color: $grey;
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			color: $white;
 		}
 	}
@@ -38,7 +39,8 @@ body {
 	&__nav-link-icon {
 		svg, path {
 			fill: $grey;
-			@include media('<desktop') {
+
+			@media (max-width: 1024px) {
 				fill: $white;
 			}
 		}
@@ -50,6 +52,7 @@ body {
 				background-color: rgba($grey, .8);
 			}
 		}
+
 		&__line {
 			background-color: $grey;
 		}
@@ -59,7 +62,8 @@ body {
 .visual-top {
 	&__bg {
 		background-image: url("#{$images}top-light.jpg");
-		@include media('<470px') {
+
+		@media (max-width: 470px) {
 			background-image: url("#{$images}top-light-sp.jpg");
 		}
 	}

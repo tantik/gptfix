@@ -1,141 +1,145 @@
-@use "../helpers/mixins" as *;
 @use "../helpers/vars" as *;
 
 /* app */
 
 .app {
-	display: block;
-	width: 100%;
-	max-width: 100%;
-	min-height: 1px;
-	margin-top: 240px;
-	@include media('<lg') {
-		margin-top: 170px;
-	}
-	@include media('<desktop') {
-		margin-top: 162px;
-	}
-	@include media('<tablet') {
-		margin-top: 154px;
-	}
-	@include media('<phone') {
-		margin-top: 91px;
-	}
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 1px;
+  margin-top: 240px;
 
-	&__title {
-		font-size: 37px;
-		line-height: 49px;
-		font-family: $din;
-		font-weight: 400;
-		font-style: normal;
-		text-transform: uppercase;
-		@include media('<tablet') {
-			font-size: 30px;
-			line-height: 40px;
-		}
-	}
+  @media (max-width: 1199px) { // '<lg'
+    margin-top: 170px;
+  }
+  @media (max-width: 991px) { // '<desktop'
+    margin-top: 162px;
+  }
+  @media (max-width: 767px) { // '<tablet'
+    margin-top: 154px;
+  }
+  @media (max-width: 575px) { // '<phone'
+    margin-top: 91px;
+  }
 
-	&__subtitle {
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 32px;
-	}
+  &__title {
+    font-size: 37px;
+    line-height: 49px;
+    font-family: $din;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+
+    @media (max-width: 767px) { // '<tablet'
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .text {
-	font-size: 23px;
-	line-height: 35px;
-	font-family: $serif;
-	-webkit-font-feature-settings: 'palt' 1;
-	font-feature-settings: 'palt' 1;
-	@include media('<tablet') {
-		font-size: 17px;
-		line-height: 30px;
-	}
+  font-size: 23px;
+  line-height: 35px;
+  font-family: $serif;
+  -webkit-font-feature-settings: 'palt' 1;
+  font-feature-settings: 'palt' 1;
+
+  @media (max-width: 767px) { // '<tablet'
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .text-bold {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .offset-top {
-	@include media('>=desktop') {
-		margin-top: 64px;
-	}
-	@include media('<phone') {
-		margin-top: 24px;
-	}
+  @media (min-width: 992px) { // '>=desktop'
+    margin-top: 64px;
+  }
+  @media (max-width: 575px) { // '<phone'
+    margin-top: 24px;
+  }
 }
 
 .lang-en {
-	.text {
-		font-family: $din;
-		font-weight: 300;
-		font-style: normal;
-	}
+  .text {
+    font-family: $din;
+    font-weight: 300;
+    font-style: normal;
+  }
 }
 
 .post-single {
-	@include media('<phone') {
-		margin-top: 24px;
-	}
+  @media (max-width: 575px) { // '<phone'
+    margin-top: 24px;
+  }
 
-	&__img-wrap {
-		max-width: 962px;
-		width: 100%;
-		margin-right: auto;
-		margin-left: auto;
-	}
+  &__img-wrap {
+    max-width: 962px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-	&__img {
-		position: relative;
-		display: block;
-		width: 100%;
+  &__img {
+    position: relative;
+    display: block;
+    width: 100%;
 
-		img {
-			display: block;
-			max-width: 100%;
-			margin-right: auto;
-			margin-left: auto;
-		}
-	}
+    img {
+      display: block;
+      max-width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
 
-	&__content {
-		margin-top: 48px;
-		padding-left: 48px;
-		max-width: 962px;
-		width: 100%;
-		margin-right: auto;
-		margin-left: auto;
-	}
+  &__content {
+    margin-top: 48px;
+    padding-left: 48px;
+    max-width: 962px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-	.text {
-		font-family: $serif;
-		font-feature-settings: normal;
-	}
+  .text {
+    font-family: $serif;
+    font-feature-settings: normal;
+  }
 }
 
 .scroll-to-top {
-	display: block;
-	box-shadow: none;
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
-	margin-bottom: 60px;
-	padding: 0;
-	width: 40px;
-	height: 23px;
-	margin-right: auto;
-	margin-left: auto;
-	@include media('<phone') {
-		margin-bottom: 40px;
-		width: 28px;
-		height: 20px;
-	}
+  display: block;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  margin-bottom: 60px;
+  padding: 0;
+  width: 40px;
+  height: 23px;
+  margin-right: auto;
+  margin-left: auto;
 
-	svg, path {
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
+  @media (max-width: 575px) { // '<phone'
+    margin-bottom: 40px;
+    width: 28px;
+    height: 20px;
+  }
+
+  svg,
+  path {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }

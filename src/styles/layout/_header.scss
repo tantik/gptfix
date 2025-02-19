@@ -1,6 +1,5 @@
 /* header */
 @use '../helpers/vars' as *;
-@use '../helpers/all' as *;
 
 .header {
 	padding: 82px 97px 82px;
@@ -11,20 +10,24 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	@include media('<lg') {
+
+	@media (max-width: 1760px) {
 		padding: 60px 76px 60px 60px;
 	}
-	@include media('<desktop') {
+
+	@media (max-width: 1024px) {
 		padding: 55px 48px;
 	}
-	@include media('<tablet') {
+
+	@media (max-width: 960px) {
 		padding: 57px 32px;
 	}
-	@include media('<phone') {
-		padding: 25px 20px 31px 32px;
 
+	@media (max-width: 768px) {
+		padding: 25px 20px 31px 32px;
 	}
-	@include media('<xs') {
+
+	@media (max-width: 576px) {
 		padding-left: 13px;
 		padding-right: 13px;
 	}
@@ -46,7 +49,6 @@
 		height: 100vh;
 		background-color: transparent;
 		z-index: 89;
-
 	}
 
 	&__logo {
@@ -60,17 +62,18 @@
 		background-position: 50% 50%;
 		background-size: contain;
 		background-repeat: no-repeat;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			max-width: 270px;
 			height: 47px;
 		}
 
-
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			max-width: 195px;
 			height: 34px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			max-width: 164px;
 			height: 29px;
 		}
@@ -80,7 +83,7 @@
 		}
 
 		&.active {
-			@include media('<phone') {
+			@media (max-width: 768px) {
 				background-image: url("#{$images}icon/logo-white.gif");
 			}
 		}
@@ -97,13 +100,11 @@
 		}
 	}
 
-
 	&__nav-wrap {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
 		width: calc(100% - calc(470 / 1700 * 100vw));
-
 
 		&.menu-open {
 			.header__nav {
@@ -124,13 +125,15 @@
 		padding-right: 48px;
 		width: 100%;
 
-		@include media('<1340px') {
+		@media (max-width: 1340px) {
 			padding-right: 30px;
 		}
-		@include media('<1180px'){
+
+		@media (max-width: 1180px) {
 			padding-right: 20px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			position: fixed;
 			top: 0;
 			right: 0;
@@ -140,6 +143,7 @@
 			padding-right: 0;
 			transform: translateX(100%);
 			transition: transform .2s;
+
 			&:after {
 				content: '';
 				left: 0;
@@ -151,10 +155,9 @@
 			}
 		}
 
-		@include media('<phone') {
+		@media (max-width: 768px) {
 			width: 100%;
 		}
-
 	}
 
 	&__nav-list {
@@ -163,6 +166,7 @@
 		justify-content: flex-end;
 		width: 100%;
 		height: 100%;
+
 		@media (max-height: 620px) {
 			transform: scale(.6);
 		}
@@ -171,11 +175,13 @@
 			transform: scale(.45);
 			margin-top: 20px;
 		}
+
 		@media (max-height: 375px) and (max-width: 812px) {
 			transform: scale(.4) translateY(-100px);
 			margin-top: 30px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			flex-direction: column;
 			height: 100%;
 			justify-content: center;
@@ -184,16 +190,17 @@
 
 	&__nav-item {
 		transition: opacity .2s;
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			margin-bottom: 96px;
 		}
 
-		@include media('<phone') {
+		@media (max-width: 768px) {
 			margin-bottom: 80px;
 		}
 
 		&.instagram {
-			@include media('<desktop') {
+			@media (max-width: 1024px) {
 				margin-bottom: 0;
 			}
 		}
@@ -207,15 +214,18 @@
 		display: block;
 		padding-left: 48px;
 		padding-right: 48px;
-		@include media('<1340px') {
+
+		@media (max-width: 1340px) {
 			padding-left: 30px;
 			padding-right: 30px;
 		}
-		@include media('<1180px'){
+
+		@media (max-width: 1180px) {
 			padding-left: 20px;
 			padding-right: 20px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			padding: 0;
 		}
 	}
@@ -228,19 +238,23 @@
 		font-family: $din;
 		font-weight: 400;
 		font-style: normal;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			font-size: 28px;
 			line-height: 28px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			font-size: 42px;
 			line-height: 42px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 34px;
 			line-height: 34px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			font-size: 30px;
 			line-height: 30px;
 		}
@@ -250,19 +264,23 @@
 		display: block;
 		width: 56px;
 		height: 57px;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			width: 36px;
 			height: 37px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			width: 56px;
 			height: 57px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			width: 45px;
 			height: 45px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			width: 40px;
 			height: 40px;
 		}
@@ -280,12 +298,6 @@
 		justify-content: center;
 		position: relative;
 		z-index: 90;
-		//@include media('<tablet') {
-		//	background-color: rgba($white, .3);
-		//	padding: 9px 12px;
-		//	width: auto;
-		//
-		//}
 	}
 
 	&__lang {
@@ -296,20 +308,23 @@
 		padding: 5px 27px;
 		transition: background-color, opacity .2s;
 		height: 55px;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			padding: 5px 10px;
 			height: 38px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			padding: 3px 11px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			padding-left: 9px;
 			padding-right: 9px;
 			height: 30px;
 		}
 
-		@include media('<phone') {
+		@media (max-width: 768px) {
 			padding: 3px 8px 3px;
 			height: 25px;
 		}
@@ -330,26 +345,30 @@
 		font-style: normal;
 		text-transform: uppercase;
 		word-break: initial;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			font-size: 28px;
 			line-height: 28px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			font-size: 28px;
 			line-height: 28px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 24px;
 			line-height: 25px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			font-size: 19px;
 			line-height: 19px;
 		}
 	}
 
 	.hamburger-btn {
-		@include media('>=desktop') {
+		@media (min-width: 1024px) {
 			display: none;
 		}
 		display: block;
@@ -362,15 +381,16 @@
 		border-radius: 0;
 		border: none;
 		background-color: transparent;
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			width: 27px;
 			margin-left: 5px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			width: 22px;
 			margin-left: 7px;
 		}
-
 
 		&__line {
 			display: block;
@@ -379,11 +399,12 @@
 			height: 4px;
 			transition: .4s;
 			opacity: 1;
-			@include media('<tablet') {
+
+			@media (max-width: 960px) {
 				width: 27px;
 			}
 
-			@include media('<phone') {
+			@media (max-width: 768px) {
 				height: 3px;
 				width: 22px;
 				margin-bottom: 3px;
@@ -401,7 +422,8 @@
 
 			.first {
 				transform: translateY(9px) rotate(45deg);
-				@include media('<phone') {
+
+				@media (max-width: 768px) {
 					transform: translateY(6px) rotate(45deg);
 				}
 			}
@@ -413,11 +435,11 @@
 
 			.third {
 				transform: translateY(-9px) rotate(-45deg);
-				@include media('<phone') {
+
+				@media (max-width: 768px) {
 					transform: translateY(-6px) rotate(-45deg);
 				}
 			}
 		}
-
 	}
 }

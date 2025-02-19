@@ -29,7 +29,7 @@ body {
 	}
 
 	&__nav {
-		@include media('<desktop') {
+		@media (max-width: 1024px) {
 
 			&:after {
 				background-color: rgba(#000, .8);
@@ -61,7 +61,7 @@ body {
 .visual-top {
 	&__bg {
 		background-image: url("#{$images}top-night.jpg");
-		@include media('<470px') {
+		@media (max-width: 470px) {
 			background-image: url("#{$images}top-night-sp.jpg");
 		}
 	}

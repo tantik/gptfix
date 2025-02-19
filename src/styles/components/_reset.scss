@@ -1,5 +1,4 @@
 @use "normalize-scss/sass/normalize" as *;
-@use "../helpers/mixins" as *;
 @use "../helpers/vars" as *;
 
 /* reset */
@@ -87,7 +86,7 @@ body {
 }
 
 /* br fix */
-@include media('>=992px') {
+@media (min-width: 992px) {
   .mb {
     display: none !important;
   }
@@ -96,7 +95,7 @@ body {
   }
 }
 
-@include media('<=991px') {
+@media (max-width: 991px) {
   .mb {
     display: block !important;
   }
@@ -123,10 +122,10 @@ body {
   padding: 0 $container-p;
   box-sizing: content-box;
 
-  @include media('<desktop') {
+  @media (max-width: 1024px) {
     margin-left: 0;
   }
-  @include media('<tablet') {
+  @media (max-width: 960px) {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -137,7 +136,7 @@ body {
   }
 
   @include clearfix();
-  @include media('<=#{$container-width}') {
+  @media (max-width: $container-width) {
     box-sizing: border-box;
   }
 }

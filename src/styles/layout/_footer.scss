@@ -1,15 +1,16 @@
 /* footer */
-@use '../helpers/mixins' as *;
 @use '../helpers/vars' as *;
 
 .footer {
 	margin-top: auto;
 	padding-top: 60px;
 	padding-bottom: 60px;
-	@include media('<phone') {
+
+	@media (max-width: 768px) {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
+
 	&__copy {
 		text-align: center;
 		display: block;
@@ -17,7 +18,8 @@
 		font-family: $serif;
 		font-feature-settings: normal;
 		line-height: 47px;
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			font-size: 14px;
 			line-height: 30px;
 		}

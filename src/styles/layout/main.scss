@@ -9,11 +9,12 @@
 		background-position: 50% 60%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			min-height: 506px;
 		}
 
-		@include media('<tablet') {
+		@media (max-width: 960px) {
 			min-height: 405px;
 			background-position: 50% 70%;
 		}
@@ -23,14 +24,17 @@
 		padding-left: 128px;
 		padding-right: 128px;
 		margin-top: 80px;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			padding-left: 64px;
 			padding-right: 64px;
 		}
-		@include media('<desktop') {
+
+		@media (max-width: 1024px) {
 			margin-top: 40px;
 		}
-		@include media('<phone') {
+
+		@media (max-width: 768px) {
 			padding-left: 32px;
 			padding-right: 32px;
 		}
@@ -42,11 +46,13 @@
 		font-family: $serif;
 		-webkit-font-feature-settings: 'palt' 1;
 		font-feature-settings: 'palt' 1;
-		@include media('<lg') {
+
+		@media (max-width: 1760px) {
 			font-size: 23px;
 			line-height: 32px;
 		}
-		@include media('<tablet') {
+
+		@media (max-width: 960px) {
 			font-size: 17px;
 			line-height: 30px;
 		}
@@ -55,7 +61,8 @@
 
 .gallery__wrap {
 	margin-top: 120px;
-	@include media('<phone') {
+
+	@media (max-width: 768px) {
 		margin-top: 80px;
 	}
 }
@@ -74,17 +81,17 @@
 		transform: translateY(0);
 	}
 
-	@include media('<desktop') {
+	@media (max-width: 1024px) {
 		margin-bottom: 40px;
 	}
-	@include media('<tablet') {
+
+	@media (max-width: 960px) {
 		margin-bottom: 32px;
 	}
 
 	&:last-child {
 		margin-bottom: 0;
 	}
-
 
 	&__list {
 		display: block;
@@ -105,17 +112,20 @@
 			max-width: 280px;
 			min-width: 280px;
 			margin-right: 184px;
-			@include media('<desktop') {
+
+			@media (max-width: 1024px) {
 				max-width: 235px;
 				min-width: 235px;
 				margin-right: 152px;
 			}
-			@include media('<tablet') {
+
+			@media (max-width: 960px) {
 				max-width: 188px;
 				min-width: 188px;
 				margin-right: 120px;
 			}
-			@include media('<phone') {
+
+			@media (max-width: 768px) {
 				max-width: 125px;
 				min-width: 125px;
 				margin-right: 56px;
@@ -136,23 +146,25 @@
 			max-width: 424px;
 			min-width: 424px;
 			margin-right: 188px;
-			@include media('<desktop') {
+
+			@media (max-width: 1024px) {
 				max-width: 350px;
 				min-width: 350px;
 				margin-right: 224px;
 			}
-			@include media('<tablet') {
+
+			@media (max-width: 960px) {
 				max-width: 280px;
 				min-width: 280px;
 				margin-right: 180px;
 			}
-			@include media('<phone') {
+
+			@media (max-width: 768px) {
 				max-width: 188px;
 				min-width: 188px;
 				margin-right: 120px;
 			}
 		}
-
 
 		.gallery__list-item-img {
 			padding-bottom: calc(447 / 424 * 100%);
@@ -161,7 +173,6 @@
 
 	&__list-item-inner {
 		display: flex;
-
 	}
 
 	&__list-item-img {
@@ -182,7 +193,6 @@
 		}
 	}
 }
-
 
 .lang-en{
 	.visual-top{
